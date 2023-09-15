@@ -1,70 +1,24 @@
-# age_str = input('What is your age? ')
-# print(f'Your age is {age_str}')
+age_str = input('What is your age? ')
+print(f'Your age is {age_str}')
 
-# options = {
-#     '4g': False,
-#     '5g': False,
-#     'wifi open': False,
-# }
+options = {
+    '4g': False,
+    '5g': False,
+    'wifi open': False,
+}
 
-# answer = input(f'what is your preffered connection? ({"/".join(options.keys())}): ')
-# if (answer.lower() not in options.keys()):
-#     print(f'invalid option ({answer})')
-# else:
-#     options[answer.lower()] = True
-#     if (options['wifi open'] is True):
-#         print('this connection may not be secure')
-#         answer2 = input('are you sure you want to continue? (y/n): ')
-#         if (answer2.lower() == 'n'):
-#             options['wifi open'] = False
-#             print('connection aborted')
-#         else:
-#             print(f'you are connected via {answer.lower()}')
-#     else:
-#         print(f'you are connected via {answer.lower()}')
-
-
-# --------------------------------------------------
-
-
-cijfer = int(input("wat is jou cijfer: "))
-omschrijving = ""
-
-
-if cijfer == 10:
-    omschrijving = "Uitmuntend"
-    print(omschrijving)
-elif cijfer == 9:
-    omschrijving = "Zeer goed"
-    print(omschrijving)
-elif cijfer == 8:
-    omschrijving = "Goed"
-    print(omschrijving)
-elif cijfer == 7:
-    omschrijving = "Ruim voldoende"
-    print(omschrijving)
-elif cijfer == 6:
-    omschrijving = "Voldoende"
-    print(omschrijving)
-elif cijfer == 5:
-    omschrijving = "Bijna voldoende"
-    print(omschrijving)
-elif cijfer == 4:
-    omschrijving = "Onvoldoende"
-    print(omschrijving)
-elif cijfer == 3:
-    omschrijving = "Gering"
-    print(omschrijving)
-elif cijfer == 2:
-    omschrijving = "Slecht"
-    print(omschrijving)
-elif cijfer == 1:
-    omschrijving = "Zeer slecht"
-    print(omschrijving)
+answer = input(f'what is your preffered connection? ({"/".join(options.keys())}): ')
+if (answer.lower() not in options.keys()):
+    print(f'invalid option ({answer})')
 else:
-    print("Dit kan ik niet omzetten!")
-
-if cijfer >= 6:
-    print(f"Gefeliciteerd, {omschrijving} je resultaat is een {cijfer}")
-elif cijfer < 6:
-    print(f"Jammer, {omschrijving} je resultaat is een {cijfer}")
+    options[answer.lower()] = True
+    if (options['wifi open'] is True):
+        print('this connection may not be secure')
+        answer2 = input('are you sure you want to continue? (y/n): ')
+        if (answer2.lower() == 'n'):
+            options['wifi open'] = False
+            print('connection aborted')
+        else:
+            print(f'you are connected via {answer.lower()}')
+    else:
+        print(f'you are connected via {answer.lower()}')
